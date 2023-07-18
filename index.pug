@@ -1,0 +1,59 @@
+svg(display="none")
+  symbol#home(viewBox="0 0 24 24")
+    g(fill="currentColor")
+      polygon(points="12 0,24 8,24 24,16 24,16 14,8 14,8 24,0 24,0 8")
+  symbol#videos(viewBox="0 0 24 24")
+    g(fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+      line(x1="3" y1="1" x2="21" y2="1")
+      line(x1="1" y1="5" x2="23" y2="5")
+      rect(x="1" y="9" rx="2" ry="2" width="22" height="13")
+      polygon(points="10 12,15 15,10 18")
+  symbol#books(viewBox="0 0 24 24")
+    g(fill="currentColor")
+      path(d="M21,0h-7c-0.8,0-1.5,0.3-2,0.8C11.5,0.3,10.8,0,10,0H3C1.3,0,0,1.3,0,3v16c0,1.7,1.3,3,3,3h7c0.6,0,1,0.4,1,1 c0,1.3,2,1.3,2,0c0-0.6,0.4-1,1-1h7c1.7,0,3-1.3,3-3V3C24,1.3,22.7,0,21,0z M10,20H3c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1h7 c0.6,0,1,0.4,1,1v17.2C10.7,20.1,10.4,20,10,20z M22,19c0,0.6-0.4,1-1,1h-7c-0.4,0-0.7,0.1-1,0.2V3c0-0.6,0.4-1,1-1h7 c0.6,0,1,0.4,1,1V19z")
+  symbol#profile(viewBox="0 0 24 24")
+    g(fill="none" stroke="currentColor" stroke-width="2")
+      circle(cx="12" cy="6.5" r="5.5")
+      path(d="M20.473,23H3.003c-1.276,0-2.228-1.175-1.957-2.422,.705-3.239,3.029-8.578,10.693-8.578s9.987,5.336,10.692,8.575c.272,1.248-.681,2.425-1.959,2.425Z")
+
+nav.nav.nav--on-page1
+  ul.nav__items
+    li.nav__item
+      a.nav__item-link.nav__item-link--primary(href="#" data-nav-item="1" aria-describedby="current")
+        svg.nav__item-icon(width="24px" height="24px" aria-hidden="true")
+          title Home
+          use(xlink:href="#home")
+        span.nav__item-sr Home
+    li.nav__item
+      a.nav__item-link.nav__item-link--red(href="#" data-nav-item="2")
+        svg.nav__item-icon(width="24px" height="24px" aria-hidden="true")
+          title Videos
+          use(xlink:href="#videos")
+        span.nav__item-sr Videos
+    li.nav__item
+      a.nav__item-link.nav__item-link--orange(href="#" data-nav-item="3")
+        svg.nav__item-icon(width="24px" height="24px" aria-hidden="true")
+          title Books
+          use(xlink:href="#books")
+        span.nav__item-sr Books
+    li.nav__item
+      a.nav__item-link.nav__item-link--purple(href="#" data-nav-item="4")
+        svg.nav__item-icon(width="24px" height="24px" aria-hidden="true")
+          title Profile
+          use(xlink:href="#profile")
+        span.nav__item-sr Profile
+  div#current(hidden) Current page
+  div.nav__fake-icons
+    div.nav__fake-icon-box(data-glass-item="1")
+      svg.nav__fake-icon.nav__fake-icon--primary(width="24px" height="24px" aria-hidden="true")
+        use(xlink:href="#home")
+    div.nav__fake-icon-box(data-glass-item="2")
+      svg.nav__fake-icon.nav__fake-icon--red(width="24px" height="24px" aria-hidden="true")
+        use(xlink:href="#videos")
+    div.nav__fake-icon-box(data-glass-item="3")
+      svg.nav__fake-icon.nav__fake-icon--orange(width="24px" height="24px" aria-hidden="true")
+        use(xlink:href="#books")
+    div.nav__fake-icon-box(data-glass-item="4")
+      svg.nav__fake-icon.nav__fake-icon--purple(width="24px" height="24px" aria-hidden="true")
+        use(xlink:href="#profile")
+  div.nav__glass(data-glass)
